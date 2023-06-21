@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <!-- Created simple title name and linked the stylesheet, also used viewport for web accessibility-->
+        <title>Googleo Advanced Search</title>
+        <link rel = "stylesheet" href = "search.css">
+        <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+        <!-- Had to had a margin left below so that the website stays on the left as asked-->
+        <style>
+        body {
+          margin-left: 35px; 
+        }
+        </style>
+    </head>
+    
+
+        <h2>Advanced Search</h2>
+        <hr class = "seperator"> <!-- this is to create a horizontal line that seperates the adv search title and find pages...-->
+        <h3>
+        Find pages with...
+        </h3>
+        <form action="https://www.google.com/search" method = "GET"> <!-- action+method provided in hint-->
+          <div class = "adv-forms">
+            <label for="all-words">all these words:
+            </label>
+            <input type="text" type = "hidden" id="all-words" name="as_q"> <!-- operator query name for all words -->
+          </div>
+
+          <!-- i named them all the same class but re wrote them just incase i wanted to edit one.-->
+          <div class = "adv-forms">
+            <label for="exact-phrase">this exact word or phrase:
+            </label>
+            <input type = "text" type = "hidden" id="exact-phrase" name="as_epq"> <!-- operator query name for "exact" -->
+          </div>
+          <!-- Create a div class for all the search fields "forms"-->
+          <div class = "adv-forms">
+            <label for = "any-words">any of these words:
+            </label>
+            <input type = "text" type = "hidden" id = "any-words" name = "as_oq"> <!-- operator query name for "any" -->
+          </div>
+
+          <div class = "adv-forms">
+            <label for = "none-words">none of these words: <!-- operator query name for "none"-->
+            </label>
+            <input type = "text" type = "hidden" id="none-words" name="as_eq"> 
+          </div>
+          <button type = "submit" class = "advanced-search-button">Advanced Search</button>
+        </form>
+</html>

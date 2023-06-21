@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Image Search!</title>
+        <link rel = "stylesheet" href = "search.css">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    </head>
+    <body1>
+        <image src = "googleo images.png" alt = "googleo-img logo" class = "logo"></image>
+        <div class = "return-links">
+            <a href = "index.html" class = "back-to-google">Google Search</a>
+            <a href = "adv-search.html" class = "advsearch">Advanced Search</a>
+        </div>
+        <form action = "https://www.google.com/search" class = "container-search">
+            <input type = "text" name = "q">
+            <!-- used type hidden to prevent going to google search instead of img search-->
+            <!-- name and value have to be tbm and isch as it is googles standard parameters-->
+            <input type = "hidden" name = "tbm" value = "isch">
+            <button type = "submit" class = "search-butt">Image Search</button>
+        </form>
+        
+        <div id="results"></div>
+        <!-- I used googles image search script as shown, this allows search for images-->
+        <script src = "image-search-script.js">
+        </script>
+    </body1>
+</html>
